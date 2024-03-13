@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  background: var(--bg);
+}
+
+:root {
+  --bg: #f2e5ab;
+  --bg-purple: rgb(176, 2, 176);
+  --white: #ffffff;
+  --opwhite: #ffffff4e;
+}
+
+/* Font */
+@font-face {
+  font-family: "Poppins";
+  src: url("./components/fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("./components/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url("./components/fonts/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Micky-font";
+  src: url("./components/fonts/MickeyMouseLine_PERSONAL_USE_ONLY.otf");
+}
+
+/* Main */
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 1140px;
+  margin: 0 auto;
+  height: 95svh;
+}
+
+/* title */
+.main .title {
+  font-family: Micky-font;
+  font-size: clamp(2rem, 0.3043rem + 3.4783vw, 2rem);
+}
+
+.title span p {
+  margin: 0 50px 0 50px;
+  font-size: clamp(0.8rem, 0.3043rem + 3.4783vw, 0.8rem);
+  font-family: Poppins-Bold;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.main .feedback {
+  font-family: Poppins;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 0 1rem 0;
+}
+
+.feedback .head {
+  margin: 0 50px 0 50px;
+  padding: 10px 0 0 0;
+  border-radius: 20px 20px 0 0;
+  font-family: "Micky-font";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  border: 3px solid black;
+  border-bottom: 0;
+}
+
+.feedback .head span {
+  font-size: 40px;
+}
+
+.feedback .message {
+  text-align: justify;
+  font-size: clamp(0.8rem, 0.3043rem + 3.4783vw, 0.8rem);
+  padding: 3em 10px 5em 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background: var(--white);
+  height: 100px;
+  max-height: 200px;
+}
+
+.feedback .message p {
+  line-height: 15px;
+}
+
+.btn {
+  margin: 50px 0 0 0;
+}
+
+.btn button {
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  border: 3px solid black;
+  font-family: Poppins-Bold;
+  background: var(--white);
+}
+.btn button:hover {
+  box-shadow: 0 0 7px 5px var(--bg-purple);
+  color: var(--bg-purple);
+  transition: all 0.3s ease;
+  border: 3px solid var(--white);
+}
+
+.main .creator {
+  font-family: Poppins-Bold;
+  color: var(--opwhite);
+}
+
+/* media */
+@media all and (max-width: 550px) {
+  .main {
+    width: calc(100% - 40px);
+  }
+
+  .main .title {
+    font-size: clamp(1.3rem, 0.3043rem + 3.4783vw, 1.3rem);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .main {
+    width: calc(100% - 40px);
+  }
+}
